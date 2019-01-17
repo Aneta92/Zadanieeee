@@ -21,4 +21,13 @@ public class Kierowca  extends Pracownik{
    
    }
     
+    
+    
+       public String toString(){
+      
+      String wynik="";
+      wynik="Imie: "+ this.getName()+" Nazwisko: "+ this.getSurename()+" Plec: "+this.getPlec() + " Stanowisko: Kierowca Marka pojazdu: " + this.pojazd.getMarka()+ " Model pojazdu: "+ this.pojazd.getModel() + " Numer rejestracyjny: "+this.pojazd.getNR() + " Pensja: "+ this.Salary +" "+ "\n";
+      return wynik;
+      }
+    
 }
