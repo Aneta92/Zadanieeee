@@ -24,4 +24,13 @@ public class kierownik extends Pracownik{
     
     
     }
+    
+      public String toString(){
+    String wynik="";
+   
+    wynik="Imie: "+ this.getName()+" Nazwisko: "+ this.getSurename()+" Plec: "+this.getPlec() + " Stanowisko: Kierownik   Pensja:"+ this.Salary + " Premia: "+ this.premia+ " "+ "\n";
+    
+    return wynik;
+    
+    }
 }
