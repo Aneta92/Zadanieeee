@@ -15,7 +15,7 @@ public class Pracownik {
     public void setSurename(String x){
   Surename=x;}
       public void setPlec(String x){
- Plec Gender = Plec.valueOf(x);}
+if(x=="M"){this.Gender= Plec.M;}else{this.Gender= Plec.F;}}
         public void setSalary(int x){
   Salary=x;}
       
@@ -35,14 +35,14 @@ public class Pracownik {
 		Name= "";
 		Surename= "";
 		Salary = 0;
-           Plec Gender = Plec.F;
+           Plec Gender = this.Gender.F;
             	}
 
 	public Pracownik(String i, String n, int w, String c){
 		Name = i;
 		Surename = n;
 		Salary = w;
-                 Plec Gender = Plec.valueOf(c);
+                if(c=="M"){this.Gender= Plec.M;}else{this.Gender= Plec.F;}
 	}
     
 }
