@@ -66,7 +66,7 @@ private JButton buttonnext = new JButton("continue");
               group2.add(Sprzedawca);
               
               
-         this.setBounds(200,200,250,200);
+         this.setBounds(400,400,450,400);
 	    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
               Container container = this.getContentPane();
 	    container.setLayout(new GridLayout(13,2));
