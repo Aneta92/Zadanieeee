@@ -31,4 +31,14 @@ return NumerKasy;}
         
         NumerKasy=nk;
     };
+    
+    
+     public String toString(){
+    String wynik="";
+    
+    wynik="Imie: "+ this.getName()+" Nazwisko: "+ this.getSurename()+" Plec: "+this.getPlec() + " Stanowisko: Sprzedawca "+ " Pensja: "+ this.Salary + " Numer stanowiska: "+ this.getNk()+" "+ "\n";
+    return wynik;
+    
+    
+    }
 }
