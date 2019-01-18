@@ -3,13 +3,23 @@ package javaapplicationpracownicy;
 
 
 public class Kierowca  extends Pracownik{
-    private Pojazd pojazd;
+    Pojazd pojazd = new Pojazd("","","");
+   
     
-   public Kierowca(String x, String y, String z){
-   pojazd = new Pojazd(x,y,z);
+   public Kierowca(){
+   this.setName("");
+   this.setSurename("");
+   this.setPlec("F");
+   this.setSalary(0);
+   this.pojazd.setMarka("");
+     this.pojazd.setModel("");
+     this.pojazd.setNr("");
    
    
    }
+   
+  
+  
       public Kierowca(String imie, String nazwisko, int pensja, String plec,String marka, String model , String NR ){
    pojazd = new Pojazd(marka,model,NR);
    
@@ -20,10 +30,9 @@ public class Kierowca  extends Pracownik{
   
    
    }
-    
-    
-    
-       public String toString(){
+      
+    @Override
+      public String toString(){
       
       String wynik="";
       wynik="Imie: "+ this.getName()+" Nazwisko: "+ this.getSurename()+" Plec: "+this.getPlec() + " Stanowisko: Kierowca Marka pojazdu: " + this.pojazd.getMarka()+ " Model pojazdu: "+ this.pojazd.getModel() + " Numer rejestracyjny: "+this.pojazd.getNR() + " Pensja: "+ this.Salary +" "+ "\n";
