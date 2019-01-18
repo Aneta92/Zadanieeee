@@ -24,7 +24,7 @@ private JButton buttonnext = new JButton("continue");
     private JLabel label2 = new JLabel("Input surename :");
     private JTextField input2 = new JTextField("", 10);
     
-   JRadioButton male = new JRadioButton("male");
+   JRadioButton male = new JRadioButton("Male");
      JRadioButton female = new JRadioButton("Female");
    
   
