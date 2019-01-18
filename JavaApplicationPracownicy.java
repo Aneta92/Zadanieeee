@@ -57,6 +57,13 @@ private JButton buttonnext = new JButton("continue");
         
         super("Aplikacja");
      
+                  
+       Kierowca pr1=new Kierowca();
+       kierownik pr2 = new kierownik();
+        Sprzedawca pr3 = new Sprzedawca();
+        pr1.pojazd=new Pojazd();
+        
+        
           ButtonGroup group1 = new ButtonGroup();
 	    group1.add(male);
 	    group1.add(female);
@@ -109,8 +116,10 @@ private JButton buttonnext = new JButton("continue");
               container.add(buttonnext);
             
             
-              
-      
+    
+  
+        
+       
           		buttonnext.addActionListener(new ActionListener() {
 	        
 			@Override
@@ -120,17 +129,44 @@ private JButton buttonnext = new JButton("continue");
                              String pl = "";
                             if(male.isSelected()){pl="M";}else{pl="F";}
                             if(Kierowca.isSelected()){
-                                Kierowca pr1=new Kierowca(input1.getText(), input2.getText(), Integer.parseInt(input3.getText()), pl, input6.getText(),input7.getText(),input8.getText()  );
+                           
+                               pr1.setName(input1.getText());
+                               pr1.setSurename(input2.getText());
+                                pr1.setSalary(Integer.parseInt(input3.getText()));
+                           pr1.setPlec(pl);
+                           pr1.pojazd.setMarka(input6.getText());
+                           pr1.pojazd.setModel(input7.getText());
+                           pr1.pojazd.setNr(input8.getText());
+                              
+                               
+                                
+                                
+                                
                                 wynikogolny+=pr1.toString()+"\n";
                             }
                               if(Kierownik.isSelected()){
-                                kierownik pr2 = new kierownik(input1.getText(), input2.getText(), Integer.parseInt(input3.getText()), pl ,Integer.parseInt(input4.getText()));
+                                 pr2.setName(input1.getText());
+                               pr2.setSurename(input2.getText());
+                                pr2.setSalary(Integer.parseInt(input3.getText()));
+                           pr2.setPlec(pl);
+   
+                           pr2.setPremia(Integer.parseInt(input4.getText()));
+                           
+                                
                                 wynikogolny+=pr2.toString()+ "\n";
                             }
                               
                                 if(Sprzedawca.isSelected()){
                                Sprzedawca pr3 = new Sprzedawca(input1.getText(), input2.getText(), Integer.parseInt(input3.getText()), pl ,Integer.parseInt(input5.getText()));
-                                wynikogolny+=pr3.toString()+ "\n";
+                              
+                                  pr3.setName(input1.getText());
+                               pr3.setSurename(input2.getText());
+                                pr3.setSalary(Integer.parseInt(input3.getText()));
+                           pr3.setPlec(pl);
+                           pr3.setNk(Integer.parseInt(input5.getText()));
+                               
+                               
+                               wynikogolny+=pr3.toString()+ "\n";
                             }
                               
                             input1.setText("");
