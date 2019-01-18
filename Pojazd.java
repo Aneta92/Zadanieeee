@@ -26,7 +26,12 @@ public class Pojazd {
         
         public String getNR(){
    return NuRejestr;
-   }      
+   }  
+        
+   Pojazd(){marka="";
+   model="";
+   NuRejestr="";
+   }     
    Pojazd(String x, String y,String z){
    marka=x;
    model=y;
