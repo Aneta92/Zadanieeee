@@ -10,7 +10,14 @@ public class kierownik extends Pracownik{
     }
     public int getPremia(){return this.premia;}
     
-    
+    kierownik(){
+        
+         this.setName("");
+   this.setSurename("");
+   this.setPlec("F");
+   this.setSalary(0);
+        
+        this.premia=0;}
     
     kierownik(int premia){this.premia=premia;}
     
@@ -24,8 +31,7 @@ public class kierownik extends Pracownik{
     
     
     }
-    
-      public String toString(){
+    public String toString(){
     String wynik="";
    
     wynik="Imie: "+ this.getName()+" Nazwisko: "+ this.getSurename()+" Plec: "+this.getPlec() + " Stanowisko: Kierownik   Pensja:"+ this.Salary + " Premia: "+ this.premia+ " "+ "\n";
